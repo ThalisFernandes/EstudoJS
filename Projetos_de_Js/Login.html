@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./logica.js"></script>
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #541223;
+        }
+        [Main]{
+            width:250px;
+            height:250px;
+            justify-content: center;
+            align-items: center;
+        }
+        header{
+            width:100%;
+            height: 100px;
+        }
+        article {
+            width:100%;
+            height:500px;
+            align-items: center;
+            justify-content: center;
+        }
+        [Login]{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<header>
+
+</header>
+<article>
+    <div Main>
+
+        <div Login>
+            <input type="text" placeholder="Insira seu nome" id="LoginName">
+            <input type="button" value="login" onclick="loginFunc()">
+        </div>
+    </div>
+</article>
+
+
+    <footer>
+        <input id="bgColor" type="color" value="ChangeColor">
+        <input type="button" onclick="changeBackgroud()" value="Mudar Cor de Fundo">
+    </footer>
+</body>
+</html>

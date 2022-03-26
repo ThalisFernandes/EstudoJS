@@ -1,0 +1,74 @@
+dashbord Paciente - 
+
+
+
+
+
+dashboard geral - 
+
+
+
+
+
+dashboard financeiro - 
+
+
+
+
+
+
+
+//=====================================================================================
+
+Relatório  x - 
+
+
+
+
+
+Relatótio y - 
+
+
+
+
+
+
+Relatório z - 
+
+
+
+//====================================================================================
+
+
+ PBI CAMPO unico :
+
+   - adicionar uma propriedade ao campo para ele ocupar uma linha interia;
+
+   - caso sim ele ira influênciar na renderização do outros campos: exemplo caso seja three-columns e field name tenha oneColumnField = true. os campos que ficava na mesma coluna que ele irão ser two columns, porém os de baixo continuaram com o three-column;
+  
+
+Dúvidas : 
+  todos os fields terão essa propriedade ? se não quais não vão ter ?
+     R - esses fields terão a propriedade nova (input field,textArea) 
+
+ // campos tipo dateTime, Observações e  Cor pro exemplo ?
+  
+
+  pseudoCodigo:
+
+   0 - adicionar a prop nas requisições openApi e client 
+
+   1 - gerar novo client ;
+
+   2 - gerar as novas requisições com as props
+
+   3 - criar uma função para reconhecer a propriedade singleColumn do campo;
+
+   4 - se o campo tiver true ele recebera "col-lg-12" caso não segue o bonde;
+
+   5 quando ele receber col-lg-12 os campos que ficavam nas mesma linha que ele irão receber col-lg-6 ;
+
+   6 quando ele for col-lg-12 e forem two columns, o outro campo que ficava na mesma linha ira receber col-lg-12 também .
+
+
+  5/6- ( será um if ? se sim como vou fazer ? compensa desestruturar o field para saber a ordem ? )
