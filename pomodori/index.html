@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pomodori</title>
+	<style type="text/css">
+		body{
+			background-color: gray;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+		canvas{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+        <div id="timeContainer" width="200px" height="200px">
+        	<p><h2>TESTE</h2></p>
+        	
+        </div>      
+        <div>
+        	<input type="button" value="iniciar" id="begin-button" onclick="pomodoriTrigger()">
+        </div>
+	</div>
+
+</body>
+   <script>
+	   /*
+	     *exercicio do pomodoro*
+
+		 criar uma countdown de segundos
+		 criar um countdown de minutos 
+	   */
+   	  var time,spendTime,passedTime,isActive;
+      var canvas,ctx;
+      const seconds = 60;
+      var minutes ;
+      var timePicker = 0;
+      let obj ;
+
+        function pomodoriTrigger(){
+        	
+        	if(isActive == false){
+        		isActive = true;
+        		StartPomodori();
+                 
+        	}else{
+        		isActive = false;
+        	}
+        }
+
+   	   function StartPomodori(){
+           
+           if(isActive){
+           	 time = 20;
+           	 timerTrigger()
+           }else{
+           	alert("algum processo ainda esta em andamento");
+           }
+   	     }
+         
+        function timerTrigger(){
+        	timePicker = timePicker +  1;
+        	console.log(timePicker);
+        	if(timePicker >= seconds){
+        		time += -1;
+        		timePicker = 0;
+        		pomodori_Show_elements();
+            isActive = false;
+        		console.log(time);
+        	}else{
+              var contagem = setInterval(1000,timerTrigger());
+        	}
+
+        } 
+
+        function pomodori_Show_elements(){
+        	if(isActive){
+               obj.innerHTML = `<div id="ShowTimer"><span>${time}</span></div>`
+               timerTrigger();
+        	}else{
+
+        	}
+        }
+   	    
+   	   window.addEventListener("load",()=>{
+   	    console.log(obj)
+   	   	time = 20;
+   	   	isActive = false;
+   	   	passedTime = 10000;
+            minutes = 60;
+        spendTime = 0;
+        obj = document.querySelector('#timeContainer');
+   	    obj.append(time)
+   	   })
+   </script>
+</html>
